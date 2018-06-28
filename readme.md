@@ -3,6 +3,8 @@ title: "Data Analysis"
 output: 
   html_document: 
     keep_md: yes
+    toc: true
+    toc_float: true
 ---
 
 ## About
@@ -15,7 +17,7 @@ The paper can be found on the [website of the journal](http://www.neuroseminarai
 
 
 
-##Loading data
+## Load data
 
 
 ```r
@@ -69,7 +71,7 @@ variable.names <- c("T4", "TSH", "ATPO")
 var.plot.notation <- c("T4, pm/l", "TSH, mIU/L", "Anti-TPO, IU/mL")
 ```
 
-##preparation of the data
+## Prepare data
 
 
 ```r
@@ -172,9 +174,9 @@ print.overview(DTsub)
 ```
 
 
-##Plot
+## Plot
 
-###With outliers
+### With outliers
 
 ```r
 give.n <- function(x){ #function for positioning numbers on plots
@@ -202,7 +204,7 @@ for(variable in variable.names){
 ![](readme_files/figure-html/plots before removing outliers-1.png)<!-- -->![](readme_files/figure-html/plots before removing outliers-2.png)<!-- -->![](readme_files/figure-html/plots before removing outliers-3.png)<!-- -->
  
  
-###Without outliers
+### Without outliers
 Here we are cuttiong out records for which values of variables are 5 IQR (Interquartile ranges) lower or higher relative to 1st and 3rd quartiles correspondingly.
 
 
@@ -297,7 +299,7 @@ for(variable in variable.names){
 ![](readme_files/figure-html/plots without outliers-1.png)<!-- -->![](readme_files/figure-html/plots without outliers-2.png)<!-- -->![](readme_files/figure-html/plots without outliers-3.png)<!-- -->
 
 
-##Statistics (outliers removed)
+## Statistics (outliers removed)
 
 First let us see if all groups are identical. In order to do this we could use ANOVA test if  
 
@@ -477,7 +479,7 @@ We see there is at least one coulomn is different (p value < 0.05) for
 Now we can use paired comparassion to find what exactly is statistically different inside these groups.
 In order to do this we use post-hoc comparassion following Siegel and Castellan procedure.
 
-####Elderly cohort
+#### Elderly cohort
 
 ```r
 library(pgirmess)
@@ -504,7 +506,7 @@ We see strong evidence of a difference between
 
  * TIA and control
   
-####Young cohort
+#### Young cohort
 
 ```r
 kruskalmc(ATPO ~ factor(group), data=DTsub.wout[age.cohort=="young", ])
