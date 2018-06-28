@@ -1,5 +1,4 @@
 ---
-title: "Statistical Analysis for a medical research project"
 ---
 
 Statistical analysis performed as a part of research published in a medical research journal.
