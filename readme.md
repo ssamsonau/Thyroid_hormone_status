@@ -4,7 +4,7 @@ title: "Statistical Analysis for a medical research project"
 
 Statistical analysis performed as a part of research published in a medical research journal.
 
-__Open html file with analysis__ [here](http://htmlpreview.github.io/?https://github.com/ssamsonau/Thyroid_hormone_status/blob/master/readme.html)
+__Open html file with analysis__ [here](http://htmlpreview.github.io/?https://github.com/ssamsonau/Thyroid_hormone_status/blob/master/analysis.nb.html)
 
 
 
