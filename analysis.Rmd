@@ -9,11 +9,13 @@ output:
 
 ## About
 
-Statistical analysis performed as a part of research published in medical a research journal. 
+Statistical analysis performed as a part of research published in a medical research journal. 
 
-N.V. Halinouskaya, _S.V. Samsonau_, N.N. Usava, V.B. Smychek, “Thyroid Hormone Status in Stroke and Transient Ischemic Attack Patients”, Neurologijos Seminarai, Volume 19, Issue 3, 207, 2015
+* N.V. Halinouskaya, _S.V. Samsonau_, N.N. Usava, V.B. Smychek, “Thyroid Hormone Status in Stroke and Transient Ischemic Attack Patients”, Neurologijos Seminarai, Volume 19, Issue 3, 207, 2015
 
-The paper can be found on the [website of the journal](http://www.neuroseminarai.lt/wp-content/uploads/2017/02/Neuro_2015_Nr3_207-209.pdf)
+* The paper can be found on the [website of the journal](http://www.neuroseminarai.lt/wp-content/uploads/2017/02/Neuro_2015_Nr3_207-209.pdf)
+
+* [Return](https://github.com/ssamsonau/Thyroid_hormone_status) to GitHub project page
 
 
 
@@ -233,7 +235,7 @@ We see there is at least one coulomn is different (p value < 0.05) for
 Now we can use paired comparassion to find what exactly is statistically different inside these groups.
 In order to do this we use post-hoc comparassion following Siegel and Castellan procedure.
 
-#### Elderly cohort
+### Elderly cohort
 ```{r}
 library(pgirmess)
 kruskalmc(T4 ~ group, data=DTsub.wout[age.cohort=="elderly", ])
@@ -244,7 +246,7 @@ We see strong evidence of a difference between
 
  * TIA and control
   
-#### Young cohort
+### Young cohort
 ```{r}
 kruskalmc(ATPO ~ factor(group), data=DTsub.wout[age.cohort=="young", ])
 #kruskalmc(ATPO ~ factor(group), data=DTsub.wout[age.cohort=="young", ], cont='two-tailed')
