@@ -4,6 +4,17 @@ output:
   html_document: 
     keep_md: yes
 ---
+
+## About
+
+Statistical analysis performed as a part of research published in medical a research journal. 
+
+N.V. Halinouskaya, _S.V. Samsonau_, N.N. Usava, V.B. Smychek, “Thyroid Hormone Status in Stroke and Transient Ischemic Attack Patients”, Neurologijos Seminarai, Volume 19, Issue 3, 207, 2015
+
+The paper can be found on the [website of the journal](http://www.neuroseminarai.lt/wp-content/uploads/2017/02/Neuro_2015_Nr3_207-209.pdf)
+
+
+
 ##Loading data
 
 
@@ -188,7 +199,7 @@ for(variable in variable.names){
 }
 ```
 
-![](analysis_files/figure-html/plots before removing outliers-1.png)<!-- -->![](analysis_files/figure-html/plots before removing outliers-2.png)<!-- -->![](analysis_files/figure-html/plots before removing outliers-3.png)<!-- -->
+![](readme_files/figure-html/plots before removing outliers-1.png)<!-- -->![](readme_files/figure-html/plots before removing outliers-2.png)<!-- -->![](readme_files/figure-html/plots before removing outliers-3.png)<!-- -->
  
  
 ###Without outliers
@@ -283,7 +294,7 @@ for(variable in variable.names){
 }
 ```
 
-![](analysis_files/figure-html/plots without outliers-1.png)<!-- -->![](analysis_files/figure-html/plots without outliers-2.png)<!-- -->![](analysis_files/figure-html/plots without outliers-3.png)<!-- -->
+![](readme_files/figure-html/plots without outliers-1.png)<!-- -->![](readme_files/figure-html/plots without outliers-2.png)<!-- -->![](readme_files/figure-html/plots without outliers-3.png)<!-- -->
 
 
 ##Statistics (outliers removed)
